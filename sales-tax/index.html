@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales and use taxes | Colorado Department of Prototyping</title>
+    
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    
+    <script src="/assets/js/uswds.init.min.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-overlay"></div>
+    <header class="usa-header usa-header--basic">
+      <div class="usa-nav-container">
+        <div class="usa-navbar">
+          <div class="usa-logo" id="basic-logo">
+            <em class="usa-logo__text">
+              <a href="/" title="Colorado Department of Prototyping">
+                Colorado Department of Prototyping
+              </a>
+            </em>
+          </div>
+          <button type="button" class="usa-menu-btn">Menu</button>
+        </div>
+        <nav aria-label="Primary navigation" class="usa-nav">
+          <button type="button" class="usa-nav__close">
+            <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close">
+          </button>
+          <ul class="usa-nav__primary usa-accordion">
+            
+              
+            
+              
+            
+              
+              <li class="usa-nav__primary-item">
+                <a href="/sales-tax/" class="usa-nav__link">
+                  <span>Sales and use taxes</span>
+                </a>
+              </li>
+              
+            
+              
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="grid-container padding-y-4">
+      <article class="usa-prose">
+  <h1 class="font-heading-xl margin-top-0">Sales and use taxes</h1>
+  
+  <h2 id="do-you-need-to-collect-sales-and-use-taxes">Do you need to collect sales and use taxes?</h2>
+
+<p>In Colorado, the sales tax rate of 2.9% and any additional local sales taxes, apply to the sale of goods, not services. You must collect these taxes on each sale and then pay that amount to the state if:</p>
+
+<ul>
+  <li>you have a business location, inventory, or employees making retail sales in Colorado; or</li>
+  <li>you are an out-of-state retailer with annual retail sales into Colorado of more than $100,000 in the current or previous calendar year.</li>
+</ul>
+
+<!---TODO:
+1. Make it themed with USWDS / Colorado Design System tokens.
+-->
+
+<div id="cyoa_main" class="cyoa cyoa-first-step border border-05 radius-md padding-2 grid-col-8">
+    <h3>Answer a few questions about your business to see if you need to collect sales tax.</h3>
+    <a href="#tangible_property" class="cyoa-choice usa-button usa-button--outline">Get started</a>
+</div>
+
+<div id="tangible_property" class="cyoa cyoa-step">
+  <h3>Do you sell tangible personal property?</h3>
+  <p>Tangible personal property includes items like goods, products, and merchandise and digital items like videos, music, and e-books.</p>
+  <a href="#physical_presence" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#prepared_food_drink" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="prepared_food_drink" class="cyoa cyoa-step">
+  <h3>Do you sell prepared food and drink? </h3>
+  <p>Colorado sales tax applies to the sale of food and drink at dining establishments and other businesses where prepared food or drink is regularly sold.</p>
+  <a href="#pay_sales_tax" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#room_accomodations" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="pay_sales_tax" class="cyoa cyoa-step">
+  <div class="usa-alert usa-alert--success margin-top-2 margin-bottom-2">
+    <div class="usa-alert__body">
+      <h3 class="usa-alert__heading">You need to collect Colorado sales tax.</h3>
+      <p class="usa-alert__text">Based on your answers, you will need to apply for a sales and use tax license and begin collecting tax on sales in Colorado.</p>
+    </div>
+  </div>
+  <a href="#" class="cyoa-choice usa-button">Apply now</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="no_sales_tax" class="cyoa cyoa-step">
+  <div class="usa-alert usa-alert--info margin-top-2 margin-bottom-2">
+    <div class="usa-alert__body">
+      <h3 class="usa-alert__heading">You may not need to collect Colorado sales tax.</h3>
+      <p class="usa-alert__text">Based on your answers, you do not currently need to collect Colorado sales tax. If your situation changes (open a location, or hit economic thresholds), you may need to collect tax in the future.</p>
+    </div>
+  </div>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+  <br />
+</div>
+
+<div id="room_accomodations" class="cyoa cyoa-step">
+  <h3>Do you sell, or plan to sell, room and accommodations? </h3>
+  <p>Colorado imposes sales tax on the entire amount charged for rooms and accommodations.</p>
+  <a href="#pay_sales_tax" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#tel_gas_electric_commercial" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="tel_gas_electric_commercial" class="cyoa cyoa-step">
+  <h3>Do you sell, or plan to sell, telephone or telegraph services, or gas and electric service for commercial consumption ? </h3>
+  <p>Sales tax is imposed specifically on telephone and telegraph services, as well as gas and electric service for commercial consumption.</p>
+  <a href="#pay_sales_tax" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#no_sales_tax" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="physical_presence" class="cyoa cyoa-step">
+  <h3>Do you have a physical presence in Colorado?</h3>
+  <p>Having a business location, keeping inventory, or having employees who make sales in Colorado all count as physical presence.</p>
+  <a href="#store_or_website" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#over_100k" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="store_or_website" class="cyoa cyoa-step">
+  <h3>Do you sell goods in a store in Colorado or through your own website?</h3>
+  <a href="#pay_sales_tax" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#special_events" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="over_100k" class="cyoa cyoa-step">
+  <h3>Do you have annual retail sales in Colorado of more than $100,000? </h3>
+  <p>Answer yes if you have had more than $100,000 in sales in the current or previous year.</p>
+  <a href="#pay_sales_tax" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#no_sales_tax" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="special_events" class="cyoa cyoa-step">
+  <h3>Do you sell goods at special sales events? </h3>
+  <p>A special sales event involves multiple sellers at a temporary location less than three times a year. Examples: craft fairs, festivals, and antique shows.</p>
+  <a href="#special_event_license" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#online_marketplace" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<div id="special_event_license" class="cyoa cyoa-step">
+  <div class="usa-alert usa-alert--info margin-top-2 margin-bottom-2">
+    <div class="usa-alert__body">
+      <h3 class="usa-alert__heading">You may need a Special Event License</h3>
+      <p class="usa-alert__text">If you sell at special events, you must collect and remit sales taxes to the Department, unless the event organizer has a special event license and will be collecting for the participating vendors.</p>
+    </div>
+  </div>
+  <a href="#" class="cyoa-choice usa-button">Apply now</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+
+</div>
+
+<div id="online_marketplace" class="cyoa cyoa-step">
+  <h3>Do you sell goods through an online marketplace?</h3>
+  <p>You are not required to collect and remit state sales tax for products sold through a <a href="#" class="usa-tooltip" data-position="bottom" title="A marketplace facilitator has all the administrative and substantive rights, obligations, and liabilities of a retailer with respect to any sales made by a marketplace seller or multichannel seller through the facilitator's marketplace.">marketplace facilitator.</a></p>
+  <a href="#no_sales_tax" class="cyoa-choice usa-button usa-button--outline">Yes</a>
+  <a href="#no_sales_tax" class="cyoa-choice usa-button usa-button--outline">No</a>
+  <a href="#cyoa_main" class="cyoa-choice float-right">Start over</a>
+</div>
+
+<script>
+  function show(evt) {
+    let div_id = evt.currentTarget.hash.slice(1);
+    if (div_id == 'cyoa_main') {
+      document.getElementById('cyoa_main').innerHTML = starting_state;
+    } else {
+      document.getElementById('cyoa_main').innerHTML = document.getElementById(div_id).innerHTML;    
+    }
+    // Call this each time as it only assigns the necessary events for performance.
+    assign_click_events();
+  }
+
+  // Hide all the cyoa-step elements.
+  function hide_steps() {
+    let steps = document.querySelectorAll('div.cyoa-step');
+    for (const element of steps) {
+      element.style.display = 'none';
+    }
+  }
+
+  // Get the anchor value of each cyoa-choice link. Set an onclick event to show that value.
+  function assign_click_events() {
+    let choices = document.querySelectorAll('#cyoa_main .cyoa-choice');
+    for (const element of choices) {
+      element.addEventListener('click', show);
+    }
+  }
+
+  // Store the starting state as it gets removed when they "Get started".
+  // This is used for "start over".
+  let starting_state = document.getElementById('cyoa_main').innerHTML;
+
+  // Hide subsequent steps.
+  hide_steps();
+  // Assign click events for the current step.
+  assign_click_events();
+
+  // TODO: Should the current step be read from the URL in case someone shares a link?
+
+</script>
+
+
+</article>
+    </main>
+
+    <footer class="usa-footer usa-footer--medium">
+      <div class="grid-container usa-footer__return-to-top">
+        <a href="#">Return to top</a>
+      </div>
+      <div class="usa-footer__secondary-section">
+        <div class="grid-container">
+          <div class="usa-footer__logo grid-row grid-gap-2">
+            <div class="grid-col-auto">
+              <div class="usa-footer__logo-img" style="background: #ccc; width: 50px; height: 50px; border-radius: 50%;"></div>
+            </div>
+            <div class="grid-col-fill">
+              <p class="usa-footer__logo-heading">Colorado Department of Prototyping</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/uswds.min.js"></script>
+  </body>
+</html>
